@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-04",
+  "device": "Ascend910_9382/A3",
+  "records": [
+    {
+      "id": "E01",
+      "change": "Canonical CSR cache and bounded local int32 blocks",
+      "result": "accepted",
+      "evidence": [
+        "new-build.json",
+        "cpu-vs-new-build.json"
+      ],
+      "finding": "First cache-building process 248.603s vs legacy 331.628s; cache cost included. Not a cold-cache controlled comparison."
+    },
+    {
+      "id": "E02",
+      "change": "Replace AI CPU FP32 full SVD with CPU FP64 partial eigh",
+      "result": "accepted",
+      "evidence": [
+        "dense-profile-summary.json",
+        "dense-profile-kernels.csv",
+        "cpu-vs-legacy.json",
+        "score-diagnosis.json"
+      ],
+      "finding": "CPU eigh about 0.22s. Legacy score absolute gate failed; new PCA passes the same gates against full CPU FP64 reference."
+    },
+    {
+      "id": "E03",
+      "change": "Avoid redundant host FP32 copy when input is writable and contiguous",
+      "result": "accepted",
+      "evidence": [
+        "upload-ab.json"
+      ],
+      "finding": "10-repeat block projection median 9.418ms -> 2.349ms, outputs bitwise equal; read-only input still copied."
+    },
+    {
+      "id": "E04",
+      "change": "AIV fused HVG packing/normalize/log1p",
+      "result": "optional_only",
+      "evidence": [
+        "hvg-kernel-real.json",
+        "cpu-vs-new-fused.json",
+        "warm-npu.json",
+        "warm-fused.json"
+      ],
+      "finding": "Block H2D-inclusive 4.065ms, but controlled-prewarm full runs 136.749s vs 134.324s; too small and under-repeated for a default switch."
+    },
+    {
+      "id": "E05",
+      "change": "Read and restore torch_npu internal_format setting",
+      "result": "rejected_implementation",
+      "evidence": [
+        "all-unittest.log"
+      ],
+      "finding": "Installed config has setter but no getter. API/backend do not change internal_format; supported precision/device/thread settings are restored."
+    },
+    {
+      "id": "E06",
+      "change": "Use uncontrolled-cache CPU/NPU wall ratio as accelerator benefit",
+      "result": "rejected_inference",
+      "evidence": [
+        "new-cpu-summary.json",
+        "new-reuse-summary.json",
+        "warm-cpu.json",
+        "warm-npu.json"
+      ],
+      "finding": "Host pass1 differed 70.04s vs 36.00s. Repeated with explicit 21.004GB CSR pre-read; host pass1 41.87s vs 41.61s. Report controlled-prewarm observation instead."
+    },
+    {
+      "id": "E07",
+      "change": "Scientific and engineering acceptance",
+      "result": "passed_with_documented_scope",
+      "evidence": [
+        "all-unittest.log",
+        "all-kernel-tests.log",
+        "wheel-build.log",
+        "cpu-vs-new-reuse.json",
+        "cpu-vs-new-fused.json"
+      ],
+      "finding": "18 unittest + 10 kernel tests; full CPU-reference gates pass. A3 only; sampled kNN only; legacy equivalence failure retained."
+    }
+  ]
+}

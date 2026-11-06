@@ -1,0 +1,75 @@
+{
+  "environment": {
+    "python": "3.11.14",
+    "torch": "2.7.1+cpu",
+    "torch_npu": "2.7.1.post4",
+    "tilelang": "0.1.1.010+e909216995c2acc527bdb252039ec93a920c052c",
+    "tilelang_module": "/home/naie/work/slai/user-liuweiheng/envs/tilelang-ascend/lib/python3.11/site-packages/tilelang/__init__.py",
+    "device": "Ascend910_9382",
+    "hf32": false
+  },
+  "shape": [
+    8192,
+    2000
+  ],
+  "nnz": 1330083,
+  "max_row_nnz": 604,
+  "density": 0.08118182373046876,
+  "accuracy": {
+    "max_abs_error_vs_fp64": 5.177520225885246e-07,
+    "rtol": 2e-05,
+    "atol": 2e-06,
+    "zero_support_exact": true
+  },
+  "first_call_including_jit_ms": 410.54754983633757,
+  "native_metadata_host_and_h2d_ms": 5.348780192434788,
+  "cpu_threads": {
+    "OMP_NUM_THREADS": "16",
+    "OPENBLAS_NUM_THREADS": "16"
+  },
+  "repeats": 10,
+  "device_event_ms": {
+    "tilelang": {
+      "median": 1.767449975013733,
+      "min": 1.7480800151824951,
+      "max": 1.803339958190918
+    },
+    "torch_native_cached_indices": {
+      "median": 18.612489700317383,
+      "min": 18.56768035888672,
+      "max": 18.940000534057617
+    }
+  },
+  "host_wall_ms": {
+    "tilelang": {
+      "median": 1.8611550331115723,
+      "min": 1.843470148742199,
+      "max": 2.848380245268345
+    },
+    "torch_native_cached_indices": {
+      "median": 18.728259950876236,
+      "min": 18.692240118980408,
+      "max": 19.046619534492493
+    },
+    "cpu_fp32": {
+      "median": 90.76533513143659,
+      "min": 82.29381032288074,
+      "max": 98.38219080120325
+    }
+  },
+  "h2d_inclusive_host_wall_ms": {
+    "tilelang": {
+      "median": 4.065195098519325,
+      "min": 3.9987005293369293,
+      "max": 4.465709440410137
+    },
+    "torch_native": {
+      "median": 21.756065543740988,
+      "min": 21.481169387698174,
+      "max": 22.56080973893404
+    }
+  },
+  "timing_scope": "Output remains on NPU; no D2H. JIT excluded after first call. H2D uses pageable host arrays; native H2D includes rebuilding/uploading extra row and flat indices.",
+  "input_source": "artifacts/hvg-real.npz",
+  "hvg_table": null
+}

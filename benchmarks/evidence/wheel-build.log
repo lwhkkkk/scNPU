@@ -1,0 +1,9 @@
+Processing ./.
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: singlecell-npu
+  Building wheel for singlecell-npu (pyproject.toml): started
+  Building wheel for singlecell-npu (pyproject.toml): finished with status 'done'
+  Created wheel for singlecell-npu: filename=singlecell_npu-0.1.0-py3-none-any.whl size=22137 sha256=829a1175cc886ed7500968239f74d1d086e83a42486eb882d4055fa776bbcccc
+  Stored in directory: /tmp/pip-ephem-wheel-cache-zukd9mwx/wheels/5d/01/5e/b83810f2b5ad18f9c9fc7a5c745bf7edaf418f41fa18f17d3c
+Successfully built singlecell-npu

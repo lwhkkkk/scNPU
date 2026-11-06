@@ -1,0 +1,75 @@
+{
+  "environment": {
+    "python": "3.11.14",
+    "torch": "2.7.1+cpu",
+    "torch_npu": "2.7.1.post4",
+    "tilelang": "0.1.1.010+e909216995c2acc527bdb252039ec93a920c052c",
+    "tilelang_module": "/home/naie/work/slai/user-liuweiheng/envs/tilelang-ascend/lib/python3.11/site-packages/tilelang/__init__.py",
+    "device": "Ascend910_9382",
+    "hf32": false
+  },
+  "shape": [
+    8192,
+    2000
+  ],
+  "nnz": 1310816,
+  "max_row_nnz": 2000,
+  "density": 0.080005859375,
+  "accuracy": {
+    "max_abs_error_vs_fp64": 3.418068708072042e-07,
+    "rtol": 2e-05,
+    "atol": 2e-06,
+    "zero_support_exact": true
+  },
+  "first_call_including_jit_ms": 5457.622260786593,
+  "native_metadata_host_and_h2d_ms": 4.738070070743561,
+  "cpu_threads": {
+    "OMP_NUM_THREADS": "16",
+    "OPENBLAS_NUM_THREADS": "16"
+  },
+  "repeats": 10,
+  "device_event_ms": {
+    "tilelang": {
+      "median": 1.7479299902915955,
+      "min": 1.730720043182373,
+      "max": 1.8036799430847168
+    },
+    "torch_native_cached_indices": {
+      "median": 18.88923931121826,
+      "min": 18.667320251464844,
+      "max": 19.091100692749023
+    }
+  },
+  "host_wall_ms": {
+    "tilelang": {
+      "median": 1.8439698033034801,
+      "min": 1.8327701836824417,
+      "max": 2.847520634531975
+    },
+    "torch_native_cached_indices": {
+      "median": 19.08577000722289,
+      "min": 18.847350031137466,
+      "max": 19.306390546262264
+    },
+    "cpu_fp32": {
+      "median": 87.69184490665793,
+      "min": 80.67518007010221,
+      "max": 101.66996996849775
+    }
+  },
+  "h2d_inclusive_host_wall_ms": {
+    "tilelang": {
+      "median": 3.2571647316217422,
+      "min": 3.1828004866838455,
+      "max": 3.464669920504093
+    },
+    "torch_native": {
+      "median": 25.08780499920249,
+      "min": 23.72437994927168,
+      "max": 25.722309947013855
+    }
+  },
+  "timing_scope": "Output remains on NPU; no D2H. JIT excluded after first call. H2D uses pageable host arrays; native H2D includes rebuilding/uploading extra row and flat indices.",
+  "input_source": "synthetic seed137 + edge cases",
+  "hvg_table": null
+}

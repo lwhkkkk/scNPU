@@ -1,0 +1,9 @@
+test_canonicalization_blocks_and_cache (test_io.IOTests.test_canonicalization_blocks_and_cache) ... ok
+test_corrupt_cache_and_float_indices_rejected (test_io.IOTests.test_corrupt_cache_and_float_indices_rejected) ... ok
+test_fractional_and_large_duplicate_counts_preserved (test_io.IOTests.test_fractional_and_large_duplicate_counts_preserved) ... ok
+test_guards_incomplete_cache_negative_and_long_rows (test_io.IOTests.test_guards_incomplete_cache_negative_and_long_rows) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.036s
+
+OK

@@ -1,0 +1,30 @@
+{
+  "reference": "artifacts/new-cpu",
+  "candidate": "artifacts/new-build",
+  "limits": {
+    "expression_max_abs": 0.0002,
+    "eigenvalue_max_relative": 0.0002,
+    "loading_subspace_min_cosine": 0.9999,
+    "aligned_score_relative_frobenius": 0.0002,
+    "aligned_score_max_abs": 0.002,
+    "sampled_neighbor_overlap": 0.99
+  },
+  "metrics": {
+    "expression_max_abs": 0.0,
+    "eigenvalue_max_relative": 1.103841656002477e-07,
+    "loading_subspace_min_cosine": 0.9999999999990129,
+    "aligned_score_relative_frobenius": 2.549460257018493e-07,
+    "aligned_score_max_abs": 0.0005138008973517572,
+    "sampled_neighbor_overlap": 1.0
+  },
+  "passed": {
+    "expression_max_abs": true,
+    "eigenvalue_max_relative": true,
+    "loading_subspace_min_cosine": true,
+    "aligned_score_relative_frobenius": true,
+    "aligned_score_max_abs": true,
+    "sampled_neighbor_overlap": true
+  },
+  "all_passed": true,
+  "neighbor_scope": "2048 fixed-seed sampled cells, k=15 within sample; not a full million-cell graph"
+}

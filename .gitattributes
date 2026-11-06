@@ -1,0 +1,4 @@
+* text=auto eol=lf
+
+# Keep recorded benchmark evidence byte-for-byte across Windows and Linux.
+benchmarks/evidence/** -text whitespace=cr-at-eol

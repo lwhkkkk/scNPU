@@ -1,0 +1,4 @@
+Device_id,Name,Type,Accelerator Core,Start Time(us),Duration(us),Wait Time(us),Block Num
+0,aclnnMatmul_MatMulV3Common_MatMulV3,N/A,N/A,1793791835585336.165	,1052.321,0,0
+0,aclnnMatmul_MatMulCommon_MatMulV2,N/A,N/A,1793791835831683.187	,139.603,245294.679000,0
+0,aclnnSub_SubAiCore_Sub,N/A,N/A,1793791835831822.810	,11.660,0.000000,0

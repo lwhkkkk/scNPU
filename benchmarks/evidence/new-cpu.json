@@ -1,0 +1,32 @@
+{
+  "command": [
+    "/home/naie/work/slai/user-liuweiheng/PCA/.venv_npu/bin/python",
+    "-m",
+    "singlecell_npu.streaming",
+    "--input",
+    "/home/naie/work/slai/user-liuweiheng/PCA/brain_1m.h5",
+    "--output",
+    "artifacts/new-cpu",
+    "--cache",
+    "cache/brain-canonical",
+    "--device",
+    "cpu"
+  ],
+  "exit_code": 0,
+  "process_wall_seconds": 186.18816340062767,
+  "child_peak_rss_gib": 10.934371948242188,
+  "code_sha256": {
+    "singlecell_npu/__init__.py": "85ab360a3cdea1a5e2f4e7f719a4c874a858f4dffb9eb9abc14100d82bd998a5",
+    "singlecell_npu/backend.py": "7d7ee41a079fcf1725785ec0adf300cf5181f30b7c9bc4483575687bd5f99a4d",
+    "singlecell_npu/io.py": "252dd0d90a5bb29e93d84cb225ec56a6fd5364aa18a52b8a2a7f055e6482c21c",
+    "singlecell_npu/kernels/__init__.py": "337b3a117a9fc7218a4011c8e9aa0808b0f15b98b9a163b3e32aaf9ad1ec7922",
+    "singlecell_npu/kernels/_copy_1d.py": "f9ce48f0128303af3f2ae6da0772bb4ac703a2d5e79191675e83c6b0707c939a",
+    "singlecell_npu/kernels/_hvg_tilelang.py": "f2aef5c9609831a185ca3761146a9f8f4bef439f00a88e2ae59c188e3c931daf",
+    "singlecell_npu/kernels/hvg.py": "fbc01f378c5f80efcdf40605d290594db5b7b381f709a8e847d31a24226bc0c9",
+    "singlecell_npu/pp.py": "9a6ef816255a2e466188d64c77480dd36dbb57f955318c4efbba5b9514ee23ac",
+    "singlecell_npu/session.py": "c84447ecfb5ffa13c1ffc7cca18942320ae4ad18fdb419dda99c5508022caad7",
+    "singlecell_npu/streaming.py": "bb6708294ca69e3c909d0ff284c5efc4d31ac9d386d8102119db12cf1c5162bf"
+  },
+  "source_snapshot": "artifacts/new-cpu.source.zip",
+  "cache_policy": "OS page cache uncontrolled; report cache construction/reuse separately"
+}

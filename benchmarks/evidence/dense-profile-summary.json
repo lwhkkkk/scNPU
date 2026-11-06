@@ -1,0 +1,41 @@
+{
+  "scope": "one real 8192x2000 Gram + sample covariance CPU eigh(top50) + projection; not full pipeline",
+  "seconds": [
+    0.20782596990466118,
+    0.20882272999733686,
+    0.2129663797095418,
+    0.21770842000842094,
+    0.22776782978326082,
+    0.2205231199041009,
+    0.20895281992852688
+  ],
+  "median_seconds": 0.2129663797095418,
+  "backend": {
+    "device": "npu:0",
+    "eigensolver": "scipy.linalg.eigh/evr/cpu/float64",
+    "gram_calls": 11,
+    "projection_calls": 11,
+    "gram_wall_seconds": 0.23660043999552727,
+    "projection_wall_seconds": 0.12959212996065617,
+    "eigh_wall_seconds": 2.273258707486093,
+    "tolerances": {
+      "gram_relative_frobenius": 2e-05,
+      "eigenvalue_relative": 0.0002,
+      "eigenspace_min_cosine": 0.9999,
+      "eigen_residual": 0.0002,
+      "orthogonality_abs": 0.0002,
+      "projection_abs": 0.0002,
+      "score_mean_abs": 0.0002,
+      "score_covariance_abs": 0.0002,
+      "score_covariance_relative": 0.0002
+    },
+    "name": "Ascend910_9382",
+    "torch": "2.7.1+cpu",
+    "torch_npu": "2.7.1.post4",
+    "dtype": "float32",
+    "allow_hf32": false,
+    "first_gram_relative_error": 5.890119776550126e-07,
+    "first_projection_max_abs_error": 9.114955363997979e-05
+  },
+  "trace": "artifacts/dense-profile/L0"
+}
